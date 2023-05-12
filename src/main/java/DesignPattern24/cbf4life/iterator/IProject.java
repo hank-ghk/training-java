@@ -3,9 +3,9 @@ package DesignPattern24.cbf4life.iterator;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ���ӿڣ����е���Ŀ����һ���ӿ�
+* 定义一个接口，所有的项目都是一个接口
 */
 public interface IProject {
-	// ���ϰ����￴���ľ�����Ŀ��Ϣ
+	// 从老板这里看到的就是项目信息
 	public String getProjectInfo();
 }

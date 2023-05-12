@@ -4,19 +4,19 @@ package DesignPattern24.cbf4life.chainOfResponsibility.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �ɷ���
+* 丈夫类
 */
 public class Husband extends Handler {
-	// �ɷ�ֻ�������ӵ�����
+	// 丈夫只处理妻子的请求
 	public Husband() {
 		super(2);
 	}
 
-	// �ɷ���ʾ�Ĵ�
+	// 丈夫请示的答复
 	@Override
 	public void response(IWomen women) {
-		System.out.println("--------�������ɷ���ʾ-------");
+		System.out.println("--------妻子向丈夫请示-------");
 		System.out.println(women.getRequest());
-		System.out.println("�ɷ�Ĵ��ǣ�ͬ��\n");
+		System.out.println("丈夫的答复是：同意\n");
 	}
 }

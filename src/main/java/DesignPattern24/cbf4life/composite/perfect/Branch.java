@@ -4,23 +4,23 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �ڵ��࣬Ҳ���˺ܶ�
+* 节点类，也简单了很多
 */
 public class Branch extends Corp {
-	// �쵼�±�����Щ�¼��쵼��С��
+	// 领导下边有那些下级领导和小兵
 	ArrayList<Corp> subordinateList = new ArrayList<Corp>();
 
-	// ���캯���Ǳ������
+	// 构造函数是必须的了
 	public Branch(String _name, String _position, int _salary) {
 		super(_name, _position, _salary);
 	}
 
-	// ����һ��������������СͷĿ��Ҳ�����Ǹ�С��
+	// 增加一个下属，可能是小头目，也可能是个小兵
 	public void addSubordinate(Corp corp) {
 		this.subordinateList.add(corp);
 	}
 
-	// ������Щ����
+	// 我有哪些下属
 	public ArrayList<Corp> getSubordinate() {
 		return this.subordinateList;
 	}

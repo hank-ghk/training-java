@@ -3,31 +3,31 @@ package DesignPattern24.cbf4life.mediator;
 import java.util.Random;
 
 public class Sale {
-	// ����IBM�ͺŵĵ���
+	// 销售IBM型号的电脑
 	public void sellIBMComputer(int number) {
-		// ���ʿ��
+		// 访问库存
 		Stock stock = new Stock();
-		// ���ʲɹ�
+		// 访问采购
 		Purchase purchase = new Purchase();
-		if (stock.getStockNumber() < number) { // ���������������
+		if (stock.getStockNumber() < number) { // 库存数量不够销售
 			purchase.buyIBMcomputer(number);
 		}
-		System.out.println("����IBM����" + number + "̨");
+		System.out.println("销售IBM电脑" + number + "台");
 		stock.decrease(number);
 	}
 
-	// �����������,0����100֮��仯��0���������û������100����ǳ���������һ����һ��
+	// 反馈销售情况,0――100之间变化，0代表根本就没人卖，100代表非常畅销，出一个卖一个
 	public int getSaleStatus() {
 		Random rand = new Random(System.currentTimeMillis());
 		int saleStatus = rand.nextInt(100);
-		System.out.println("IBM���Ե��������Ϊ��" + saleStatus);
+		System.out.println("IBM电脑的销售情况为：" + saleStatus);
 		return saleStatus;
 	}
 
-	// �ۼ۴���
+	// 折价处理
 	public void offSale() {
-		// �ⷿ�ж���������
+		// 库房有多少卖多少
 		Stock stock = new Stock();
-		System.out.println("�ۼ�����IBM����" + stock.getStockNumber() + "̨");
+		System.out.println("折价销售IBM电脑" + stock.getStockNumber() + "台");
 	}
 }

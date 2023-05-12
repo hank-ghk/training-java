@@ -3,30 +3,30 @@ package DesignPattern24.cbf4life.composite;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��С��Ҷ�ӽڵ�
+* 最小的叶子节点
 */
 @SuppressWarnings("all")
 public class Leaf implements ILeaf {
-	// Ҷ�ӽ�ʲô����
+	// 叶子叫什么名字
 	private String name = "";
-	// Ҷ�ӵ�ְλ
+	// 叶子的职位
 	private String position = "";
-	// Ҷ�ӵ�нˮ
+	// 叶子的薪水
 	private int salary = 0;
 
-	// ͨ�����캯��������Ϣ
+	// 通过构造函数传递信息
 	public Leaf(String name, String position, int salary) {
 		this.name = name;
 		this.position = position;
 		this.salary = salary;
 	}
 
-	// ��С��С��ֻ�ܻ���Լ�����Ϣ��
+	// 最小的小兵只能获得自己的信息了
 	public String getInfo() {
 		String info = "";
-		info = "���ƣ�" + this.name;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ��" + this.salary;
+		info = "名称：" + this.name;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水：" + this.salary;
 		return info;
 	}
 }

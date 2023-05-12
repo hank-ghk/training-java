@@ -6,15 +6,15 @@ package DesignPattern24.cbf4life.facade;
 public class ModenPostOffice {
 	private LetterProcess letterProcess = new LetterProcessImpl();
 
-	// д�ţ���װ��Ͷ�ݣ�һ�廯��
+	// 写信，封装，投递，一体化了
 	public void sendLetter(String context, String address) {
-		// ����д��
+		// 帮你写信
 		letterProcess.writeContext(context);
-		// д���ŷ�
+		// 写好信封
 		letterProcess.fillEnvelope(address);
-		// ���ŷŵ��ŷ���
+		// 把信放到信封中
 		letterProcess.letterInotoEnvelope();
-		// �ʵ��ż�
+		// 邮递信件
 		letterProcess.sendLetter();
 	}
 }

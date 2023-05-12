@@ -5,11 +5,11 @@ package DesignPattern24.cbf4life.proxy;
 */
 public class JiaShi implements KindWomen {
 	public void happyWithMan() {
-		System.out.println("��������Happy��......");
+		System.out.println("¼ÖÊÏÕıÔÚHappyÖĞ......");
 
 	}
 
 	public void makeEyesWithMan() {
-		System.out.println("����������");
+		System.out.println("¼ÖÊÏÅ×ÃÄÑÛ");
 	}
 }

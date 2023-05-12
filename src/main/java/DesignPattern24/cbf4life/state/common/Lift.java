@@ -3,26 +3,26 @@ package DesignPattern24.cbf4life.state.common;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���ݵ�ʵ����
+* 电梯的实现类
 */
 public class Lift implements ILift {
-	// �����Źر�
+	// 电梯门关闭
 	public void close() {
-		System.out.println("�����Źر�...");
+		System.out.println("电梯门关闭...");
 	}
 
-	// �����ſ���
+	// 电梯门开启
 	public void open() {
-		System.out.println("�����ſ���...");
+		System.out.println("电梯门开启...");
 	}
 
-	// ���ݿ�ʼ������
+	// 电梯开始跑起来
 	public void run() {
-		System.out.println("��������������...");
+		System.out.println("电梯上下跑起来...");
 	}
 
-	// ����ֹͣ
+	// 电梯停止
 	public void stop() {
-		System.out.println("����ֹͣ��...");
+		System.out.println("电梯停止了...");
 	}
 }

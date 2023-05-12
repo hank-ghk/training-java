@@ -2,19 +2,19 @@ package DesignPattern24.cbf4life.facade;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ��д�ŵĹ���
+* 定义一个写信的过程
 */
 public interface LetterProcess {
 
-	// ����Ҫд�ŵ�����
+	// 首先要写信的内容
 	public void writeContext(String context);
 
-	// ���д�ŷ�
+	// 其次写信封
 	public void fillEnvelope(String address);
 
-	// ���ŷŵ��ŷ���
+	// 把信放到信封里
 	public void letterInotoEnvelope();
 
-	// Ȼ���ʵ�
+	// 然后邮递
 	public void sendLetter();
 }

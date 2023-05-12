@@ -3,19 +3,19 @@ package DesignPattern24.cbf4life.factoryMethod;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��ɫ���֣��������Ĳ�׼ȷ�����͵��
+* 黄色人种，这个翻译的不准确，将就点吧
 */
 public class YellowHuman implements Human {
 	public void cry() {
-		System.out.println("��ɫ���ֻ��");
+		System.out.println("黄色人种会哭");
 	}
 
 	public void laugh() {
-		System.out.println("��ɫ���ֻ��Ц���Ҹ�ѽ��");
+		System.out.println("黄色人种会大笑，幸福呀！");
 	}
 
 	public void talk() {
-		System.out.println("��ɫ���ֻ�˵����һ��˵�Ķ���˫�ֽ�");
+		System.out.println("黄色人种会说话，一般说的都是双字节");
 
 	}
 }

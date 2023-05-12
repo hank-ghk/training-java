@@ -4,18 +4,18 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��֦�ڵ㣬Ҳ���Ǹ������ž�����鳤�Ľ�ɫ
+* 树枝节点，也就是各个部门经理和组长的角色
 */
 public interface IBranch {
-	// �����Ϣ
+	// 获得信息
 	public String getInfo();
 
-	// �������ݽڵ㣬�����з����µ��з�һ��
+	// 增加数据节点，例如研发部下的研发一组
 	public void add(IBranch branch);
 
-	// ����Ҷ�ӽڵ�
+	// 增加叶子节点
 	public void add(ILeaf leaf);
 
-	// ����¼���Ϣ
+	// 获得下级信息
 	public ArrayList getSubordinateInfo();
 }

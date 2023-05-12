@@ -3,10 +3,10 @@ package DesignPattern24.cbf4life.visitor.common;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��������
+* 经理级人物
 */
 public class Manager extends Employee {
-	// ���������ְ��ǳ���ȷ��ҵ��
+	// 这类人物的职责非常明确：业绩
 	private String performance;
 
 	public String getPerformance() {
@@ -18,6 +18,6 @@ public class Manager extends Employee {
 	}
 
 	protected String getOtherInfo() {
-		return "ҵ����" + this.performance + "\t";
+		return "业绩：" + this.performance + "\t";
 	}
 }

@@ -1,26 +1,26 @@
 package DesignPattern24.cbf4life.bridge.abstraction;
 
-import com.cbf4life.bridge.implementor.Product;
+import DesignPattern24.cbf4life.bridge.implementor.Product;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ����˾�ĳ�����
+* 定义一个公司的抽象类
 */
 
 public abstract class Corp {
-	// ����һ����Ʒ���󣬳�����ˣ���֪��������ʲô��Ʒ
+	// 定义一个产品对象，抽象的了，不知道具体是什么产品
 	private Product product;
 
-	// ���캯���������ඨ�崫�ݾ���Ĳ�Ʒ����
+	// 构造函数，由子类定义传递具体的产品进来
 	public Corp(Product product) {
 		this.product = product;
 	}
 
-	// ��˾�Ǹ�ʲô�ģ�׬Ǯ��ѽ����׬Ǯɵ�ӲŸ�
+	// 公司是干什么的？赚钱的呀，不赚钱傻子才干
 	public void makeMoney() {
-		// ÿ����˾����һ����������
+		// 每个公司都是一样，先生产
 		this.product.beProducted();
-		// Ȼ������
+		// 然后销售
 		this.product.beSelled();
 	}
 }

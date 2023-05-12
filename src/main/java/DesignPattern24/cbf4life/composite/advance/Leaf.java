@@ -3,30 +3,30 @@ package DesignPattern24.cbf4life.composite.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* Leaf����Ҷ�ڵ㣬���������������ЩС��
+* Leaf是树叶节点，在这里就是我们这些小兵
 */
 @SuppressWarnings("all")
 public class Leaf implements ICorp {
-	// С��Ҳ������
+	// 小兵也有名称
 	private String name = "";
-	// С��Ҳ��ְλ
+	// 小兵也有职位
 	private String position = "";
-	// С��Ҳ��нˮ������˭�����
+	// 小兵也有薪水，否则谁给你干
 	private int salary = 0;
 
-	// ͨ��һ�����캯������С������Ϣ
+	// 通过一个构造函数传递小兵的信息
 	public Leaf(String name, String position, int salary) {
 		this.name = name;
 		this.position = position;
 		this.salary = salary;
 	}
 
-	// ���С������Ϣ
+	// 获得小兵的信息
 	public String getInfo() {
 		String info = "";
-		info = "������" + this.name;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ��" + this.salary;
+		info = "姓名：" + this.name;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水：" + this.salary;
 		return info;
 	}
 }

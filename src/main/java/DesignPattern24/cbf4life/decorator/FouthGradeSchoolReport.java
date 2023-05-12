@@ -3,23 +3,23 @@ package DesignPattern24.cbf4life.decorator;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���꼶�ĳɼ��������������ѧУ��һ��ʵʩ����ǰû�иɹ�
-* ���֡�ȱ�¡��¡�
+* 四年级的成绩单，这个是我们学校第一次实施，以前没有干过
+* 这种“缺德”事。
 */
 public class FouthGradeSchoolReport extends SchoolReport {
-	// �ҵĳɼ���
+	// 我的成绩单
 	public void report() {
-		// �ɼ����ĸ�ʽ��������ӵ�
-		System.out.println("�𾴵�XXX�ҳ�:");
+		// 成绩单的格式是这个样子的
+		System.out.println("尊敬的XXX家长:");
 		System.out.println(" ......");
-		System.out.println(" ���� 62 ��ѧ65 ���� 98 ��Ȼ 63");
+		System.out.println(" 语文 62 数学65 体育 98 自然 63");
 		System.out.println(" .......");
-		System.out.println(" �ҳ�ǩ���� ");
+		System.out.println(" 家长签名： ");
 	}
 
-	// �ҳ�ǩ��
+	// 家长签名
 	public void sign(String name) {
-		System.out.println("�ҳ�ǩ��Ϊ��" + name);
+		System.out.println("家长签名为：" + name);
 	}
 
 }

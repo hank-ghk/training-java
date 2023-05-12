@@ -3,21 +3,21 @@ package DesignPattern24.cbf4life.command;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��Ŀ��ֳ��������飬ÿ���黹��Ҫ������ɾ�ĵ�����
+* 项目组分成了三个组，每个组还是要接受增删改的命令
 */
 public abstract class Group {
-	// ����˫���ֿ��칫����Ҫ���Ǹ������ۣ�������Ҫ�ҵ������
+	// 甲乙双方分开办公，你要和那个组讨论，你首先要找到这个组
 	public abstract void find();
 
-	// ��Ҫ�����ӹ���
+	// 被要求增加功能
 	public abstract void add();
 
-	// ��Ҫ��ɾ������
+	// 被要求删除功能
 	public abstract void delete();
 
-	// ��Ҫ���޸Ĺ���
+	// 被要求修改功能
 	public abstract void change();
 
-	// ��Ҫ��������еı���ƻ�
+	// 被要求给出所有的变更计划
 	public abstract void plan();
 }

@@ -1,36 +1,36 @@
 package DesignPattern24.cbf4life.command;
 
-import com.cbf4life.command.command.AddRequirementCommand;
-import com.cbf4life.command.command.Command;
-import com.cbf4life.command.invoker.Invoker;
+import DesignPattern24.cbf4life.command.command.AddRequirementCommand;
+import DesignPattern24.cbf4life.command.command.Command;
+import DesignPattern24.cbf4life.command.invoker.Invoker;
 
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �ͻ����Ǽ׷���������Ǯ��һ�������ϴ�
+* 客户就是甲方，给我们钱的一方，是老大
 */
 public class Client {
 	public static void main(String[] args) {
-		// ���ȿͻ��ҵ�������˵������̸���󣬲��޸�
-		System.out.println("-------------�ͻ�Ҫ������һ������-----------------");
+		// 首先客户找到需求组说，过来谈需求，并修改
+		System.out.println("-------------客户要求增加一个需求-----------------");
 		Group rg = new RequirementGroup();
-		// �ҵ�������
+		// 找到需求组
 		rg.find();
-		// ����һ������
+		// 增加一个需求
 		rg.add();
-		// Ҫ�����ƻ�
+		// 要求变更计划
 		rg.plan();
 
-		// �������ǵĽ�ͷ��
-		Invoker xiaoSan = new Invoker(); // ��ͷ�˾�����С��
-		// �ͻ�Ҫ������һ������
-		System.out.println("-------------�ͻ�Ҫ������һ������-----------------");
-		// �ͻ���������������
+		// 定义我们的接头人
+		Invoker xiaoSan = new Invoker(); // 接头人就是我小三
+		// 客户要求增加一项需求
+		System.out.println("-------------客户要求增加一项需求-----------------");
+		// 客户给我们下命令来
 		Command command = new AddRequirementCommand();
 		// Command command = new DeletePageCommand();
-		// ��ͷ�˽��յ�����
+		// 接头人接收到命令
 		xiaoSan.setCommand(command);
-		// ��ͷ��ִ������
+		// 接头人执行命令
 		xiaoSan.action();
 	}
 }

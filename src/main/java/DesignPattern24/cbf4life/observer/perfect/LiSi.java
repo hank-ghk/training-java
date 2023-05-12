@@ -5,18 +5,18 @@ import java.util.Observer;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��˹����ˣ��Ǹ��۲��ߣ�ֻҪ������һ�ж�������߾�֪��
+* 李斯这个人，是个观察者，只要韩非子一有动静，这边就知道
 */
 public class LiSi implements Observer {
-	// ������˹�Ǹ��۲��ߣ�һ���������л������֪��������Ҫ���ϰ�㱨
+	// 首先李斯是个观察者，一旦韩非子有活动，他就知道，他就要向老板汇报
 	public void update(Observable observable, Object obj) {
-		System.out.println("��˹���۲쵽��˹�����ʼ���ϰ�㱨��...");
+		System.out.println("李斯：观察到李斯活动，开始向老板汇报了...");
 		this.reportToQiShiHuang(obj.toString());
-		System.out.println("��˹���㱨��ϣ����ϰ��͸��������ܲ��Գ�...\n");
+		System.out.println("李斯：汇报完毕，秦老板赏给他两个萝卜吃吃...\n");
 	}
 
-	// �㱨����ʼ��
+	// 汇报给秦始皇
 	private void reportToQiShiHuang(String reportContext) {
-		System.out.println("��˹�����棬���ϰ壡�������л��--->" + reportContext);
+		System.out.println("李斯：报告，秦老板！韩非子有活动了--->" + reportContext);
 	}
 }

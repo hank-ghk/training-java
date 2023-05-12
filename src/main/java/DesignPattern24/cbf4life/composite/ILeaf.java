@@ -3,9 +3,9 @@ package DesignPattern24.cbf4life.composite;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* Ҷ�ӽڵ㣬Ҳ������С��С���ˣ�ֻ���Լ��ɻ����ָ�ɱ�����
+* 叶子节点，也就是最小的小兵了，只能自己干活，不能指派别人了
 */
 public interface ILeaf {
-	// ����Լ�����Ϣѽ
+	// 获得自己的信息呀
 	public String getInfo();
 }

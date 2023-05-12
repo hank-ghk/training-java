@@ -3,19 +3,19 @@ package DesignPattern24.cbf4life.visitor.extend2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��һ����λ��˭����Ա�����¹����ǲ��ž�����С��
+* 在一个单位里谁都是员工，甭管你是部门经理还是小兵
 */
 public abstract class Employee {
-	public final static int MALE = 0; // 0����������
-	public final static int FEMALE = 1; // 1������Ů��
-	// �¹���˭�����й���
+	public final static int MALE = 0; // 0代表是男性
+	public final static int FEMALE = 1; // 1代表是女性
+	// 甭管是谁，都有工资
 	private String name;
-	// ֻҪ��Ա���Ǿ���нˮ
+	// 只要是员工那就有薪水
 	private int salary;
-	// �Ա����Ҫ
+	// 性别很重要
 	private int sex;
 
-	// �����Ǽ򵥵�getter/setter������˵
+	// 以下是简单的getter/setter，不多说
 	public String getName() {
 		return name;
 	}
@@ -40,6 +40,6 @@ public abstract class Employee {
 		this.sex = sex;
 	}
 
-	// ������һ�������߹�������
+	// 我允许一个访问者过来访问
 	public abstract void accept(IVisitor visitor);
 }

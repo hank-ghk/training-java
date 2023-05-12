@@ -4,39 +4,39 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �����ӣ���˹��ʦ�ܣ���������Ҫ����
+* 韩非子，李斯的师弟，韩国的重要人物
 */
 public class HanFeiZi implements Observable {
-	// ������䳤���飬������еĹ۲���
+	// 定义个变长数组，存放所有的观察者
 	private ArrayList<Observer> observerList = new ArrayList<Observer>();
 
-	// ���ӹ۲���
+	// 增加观察者
 	public void addObserver(Observer observer) {
 		this.observerList.add(observer);
 	}
 
-	// ɾ���۲���
+	// 删除观察者
 	public void deleteObserver(Observer observer) {
 		this.observerList.remove(observer);
 	}
 
-	// ֪ͨ���еĹ۲���
+	// 通知所有的观察者
 	public void notifyObservers(String context) {
 		for (Observer observer : observerList) {
 			observer.update(context);
 		}
 	}
 
-	// ������Ҫ�Է���
+	// 韩非子要吃饭了
 	public void haveBreakfast() {
-		System.out.println("������:��ʼ�Է���...");
-		// ֪ͨ���еĹ۲���
-		this.notifyObservers("�������ڳԷ�");
+		System.out.println("韩非子:开始吃饭了...");
+		// 通知所有的观察者
+		this.notifyObservers("韩非子在吃饭");
 	}
 
-	// �����ӿ�ʼ������,�Ŵ���ûɶ���֣������뵽�ľ���ô��
+	// 韩非子开始娱乐了,古代人没啥娱乐，你能想到的就那么多
 	public void haveFun() {
-		System.out.println("������:��ʼ������...");
-		this.notifyObservers("������������");
+		System.out.println("韩非子:开始娱乐了...");
+		this.notifyObservers("韩非子在娱乐");
 	}
 }

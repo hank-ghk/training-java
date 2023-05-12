@@ -3,20 +3,20 @@ package DesignPattern24.cbf4life.decorator;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ѧУ����������㱨
+* 学校排名的情况汇报
 */
 public class SortDecorator extends Decorator {
-	// ���캯��
+	// 构造函数
 	public SortDecorator(SchoolReport sr) {
 		super(sr);
 	}
 
-	// �����ϰ�ѧУ���������
+	// 告诉老爸学校的排名情况
 	private void reportSort() {
-		System.out.println("����������38��...");
+		System.out.println("我是排名第38名...");
 	}
 
-	// �ϰֿ���ɼ������ٸ���������ǿ����
+	// 老爸看完成绩单后再告诉他，加强作用
 	@Override
 	public void report() {
 		super.report();

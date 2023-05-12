@@ -2,13 +2,13 @@ package DesignPattern24.cbf4life.singleton2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ͨ�õ���ģʽ
+* 通用单例模式
 */
 @SuppressWarnings("all")
 public class SingletonPattern {
 	private static final SingletonPattern singletonPattern = new SingletonPattern();
 
-	// ����ס����ֱ�Ӳ���һ��ʵ��
+	// 限制住不能直接产生一个实例
 	private SingletonPattern() {
 	}
 

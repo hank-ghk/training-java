@@ -3,12 +3,12 @@ package DesignPattern24.cbf4life.decorator;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �ɼ����ĳ�����
+* 成绩单的抽象类
 */
 public abstract class SchoolReport {
-	// �ɼ�������Ҫչʾ�ľ�����ĳɼ����
+	// 成绩单的主要展示的就是你的成绩情况
 	public abstract void report();
 
-	// �ɼ���Ҫ�ҳ�ǩ�֣��������Ҫ����
+	// 成绩单要家长签字，这个是最要命的
 	public abstract void sign(String string);
 }

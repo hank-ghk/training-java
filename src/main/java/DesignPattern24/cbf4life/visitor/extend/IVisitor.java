@@ -3,15 +3,15 @@ package DesignPattern24.cbf4life.visitor.extend;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �����ߣ���Ҫȥ�����˼ҵ�������
+* 访问者，我要去访问人家的数据了
 */
 public interface IVisitor {
-	// ���ȶ����ҿ��Է�����ͨԱ��
+	// 首先定义我可以访问普通员工
 	public void visit(CommonEmployee commonEmployee);
 
-	// ��ζ��壬�һ����Է��ʲ��ž���
+	// 其次定义，我还可以访问部门经理
 	public void visit(Manager manager);
 
-	// ͳ������Ա�������ܺ�
+	// 统计所有员工工资总和
 	public int getTotalSalary();
 }

@@ -5,13 +5,13 @@ public class Purchase extends AbstractColleague {
 		super(_mediator);
 	}
 
-	// �ɹ�IBM�ͺŵĵ���
+	// 采购IBM型号的电脑
 	public void buyIBMcomputer(int number) {
 		super.mediator.execute("purchase.buy", number);
 	}
 
-	// ���ڲɹ�IBM����
+	// 不在采购IBM电脑
 	public void refuseBuyIBM() {
-		System.out.println("���ٲɹ�IBM����");
+		System.out.println("不再采购IBM电脑");
 	}
 }

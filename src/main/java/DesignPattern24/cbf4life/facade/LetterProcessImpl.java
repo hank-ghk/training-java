@@ -2,27 +2,27 @@ package DesignPattern24.cbf4life.facade;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* д�ŵľ���ʵ����
+* 写信的具体实现了
 */
 public class LetterProcessImpl implements LetterProcess {
-	// д��
+	// 写信
 	public void writeContext(String context) {
-		System.out.println("��д�ŵ�����...." + context);
+		System.out.println("填写信的内容...." + context);
 	}
 
-	// ���ŷ�����д��Ҫ����Ϣ
+	// 在信封上填写必要的信息
 	public void fillEnvelope(String address) {
-		System.out.println("��д�ռ��˵�ַ������...." + address);
+		System.out.println("填写收件人地址及姓名...." + address);
 	}
 
-	// ���ŷŵ��ŷ��У������
+	// 把信放到信封中，并封好
 	public void letterInotoEnvelope() {
-		System.out.println("���ŷŵ��ŷ���....");
+		System.out.println("把信放到信封中....");
 	}
 
-	// ���������У��ʵ�
+	// 塞到邮箱中，邮递
 	public void sendLetter() {
-		System.out.println("�ʵ��ż�...");
+		System.out.println("邮递信件...");
 	}
 
 }

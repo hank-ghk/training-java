@@ -4,47 +4,47 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���ڵ��ʵ����
+* 根节点的实现类
 */
 @SuppressWarnings("all")
 public class Root implements IRoot {
-	// ������ڵ��µ���֦�ڵ����Ҷ�ڵ㣬Subordinate����˼���¼�
+	// 保存根节点下的树枝节点和树叶节点，Subordinate的意思是下级
 	private ArrayList subordinateList = new ArrayList();
-	// ���ڵ������
+	// 根节点的名称
 	private String name = "";
-	// ���ڵ��ְλ
+	// 根节点的职位
 	private String position = "";
-	// ���ڵ��нˮ
+	// 根节点的薪水
 	private int salary = 0;
 
-	// ͨ�����캯�����ݽ����ܾ������Ϣ
+	// 通过构造函数传递进来总经理的信息
 	public Root(String name, String position, int salary) {
 		this.name = name;
 		this.position = position;
 		this.salary = salary;
 	}
 
-	// ������֦�ڵ�
+	// 增加树枝节点
 	public void add(IBranch branch) {
 		this.subordinateList.add(branch);
 	}
 
-	// ����Ҷ�ӽڵ㣬�������飬ֱ���������ܾ���
+	// 增加叶子节点，比如秘书，直接隶属于总经理
 	public void add(ILeaf leaf) {
 		this.subordinateList.add(leaf);
 	}
 
-	// �õ��Լ�����Ϣ
+	// 得到自己的信息
 	public String getInfo() {
 		String info = "";
-		info = "���ƣ�" + this.name;
+		info = "名称：" + this.name;
 		;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ: " + this.salary;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水: " + this.salary;
 		return info;
 	}
 
-	// �õ��¼�����Ϣ
+	// 得到下级的信息
 	public ArrayList getSubordinateInfo() {
 		return this.subordinateList;
 	}

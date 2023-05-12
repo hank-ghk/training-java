@@ -2,17 +2,17 @@ package DesignPattern24.cbf4life.prototype.advance;
 
 public class AdvTemplate {
 
-	// ���������
-	private String advSubject = "XX���й������ÿ��齱�";
-	// ���������
-	private String advContext = "����齱�֪ͨ��ֻҪˢ��������1����....";
+	// 广告信名称
+	private String advSubject = "XX银行国庆信用卡抽奖活动";
+	// 广告信内容
+	private String advContext = "国庆抽奖活动通知：只要刷卡就送你1百万！....";
 
-	// ȡ�ù���ŵ�����
+	// 取得广告信的名称
 	public String getAdvSubject() {
 		return this.advSubject;
 	}
 
-	// ȡ�ù���ŵ�����
+	// 取得广告信的内容
 	public String getAdvContext() {
 		return this.advContext;
 	}

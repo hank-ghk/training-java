@@ -1,24 +1,24 @@
-package DesignPattern24.cbf4life.abstactFactory.humanFactory;
+package DesignPattern24.cbf4life.abstractFactory.humanFactory;
 
-import com.cbf4life.abstactFactory.Human;
-import com.cbf4life.abstactFactory.HumanEnum;
+import DesignPattern24.cbf4life.abstractFactory.Human;
+import DesignPattern24.cbf4life.abstractFactory.HumanEnum;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���Դ�������
+* 男性创建工厂
 */
 public class MaleHumanFactory extends AbstractHumanFactory {
-	// ����һ�����Ժ�����
+	// 创建一个男性黑种人
 	public Human createBlackHuman() {
 		return super.createHuman(HumanEnum.BlackMaleHuman);
 	}
 
-	// ����һ�����԰�����
+	// 创建一个男性白种人
 	public Human createWhiteHuman() {
 		return super.createHuman(HumanEnum.WhiteMaleHuman);
 	}
 
-	// ����һ�����Ի�����
+	// 创建一个男性黄种人
 	public Human createYellowHuman() {
 		return super.createHuman(HumanEnum.YelloMaleHuman);
 	}

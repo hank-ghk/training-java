@@ -4,42 +4,42 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��Щ��֦�ڵ�Ҳ������Щ�쵼�Ǽ�Ҫ���Լ�����Ϣ����Ҫ֪���Լ����������
+* 这些树枝节点也就是这些领导们既要有自己的信息，还要知道自己的下属情况
 */
 @SuppressWarnings("all")
 public class Branch implements IBranch, ICorp {
-	// �쵼Ҳ���ˣ�Ҳ������
+	// 领导也是人，也有名字
 	private String name = "";
-	// �쵼���쵼��ͬ��Ҳ��ְλ����
+	// 领导和领导不同，也是职位区别
 	private String position = "";
-	// �쵼Ҳ����нˮ��
+	// 领导也是拿薪水的
 	private int salary = 0;
-	// �쵼�±�����Щ�¼��쵼��С��
+	// 领导下边有那些下级领导和小兵
 	ArrayList<ICorp> subordinateList = new ArrayList<ICorp>();
 
-	// ͨ�����캯�������쵼����Ϣ
+	// 通过构造函数传递领导的信息
 	public Branch(String name, String position, int salary) {
 		this.name = name;
 		this.position = position;
 		this.salary = salary;
 	}
 
-	// ����һ��������������СͷĿ��Ҳ�����Ǹ�С��
+	// 增加一个下属，可能是小头目，也可能是个小兵
 	public void addSubordinate(ICorp corp) {
 		this.subordinateList.add(corp);
 	}
 
-	// ������Щ����
+	// 我有哪些下属
 	public ArrayList<ICorp> getSubordinate() {
 		return this.subordinateList;
 	}
 
-	// �쵼Ҳ���ˣ���Ҳ����Ϣ
+	// 领导也是人，他也有信息
 	public String getInfo() {
 		String info = "";
-		info = "������" + this.name;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ��" + this.salary;
+		info = "姓名：" + this.name;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水：" + this.salary;
 		return info;
 	}
 }

@@ -9,7 +9,7 @@ public class VarExpression extends Expression {
 		this.key = _key;
 	}
 
-	// ��map��ȡ֮
+	// 从map中取之
 	public int interpreter(HashMap<String, Integer> var) {
 		return var.get(this.key);
 	}

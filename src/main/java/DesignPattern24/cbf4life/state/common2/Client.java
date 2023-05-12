@@ -3,21 +3,21 @@ package DesignPattern24.cbf4life.state.common2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ģ����ݵĶ���
+* 模拟电梯的动作
 */
 public class Client {
 	public static void main(String[] args) {
 		ILift lift = new Lift();
-		// ���ݵĳ�ʼ����Ӧ����ֹͣ״̬
+		// 电梯的初始条件应该是停止状态
 		lift.setState(ILift.STOPPING_STATE);
-		// �����ǵ����ſ������˽�ȥ
+		// 首先是电梯门开启，人进去
 		lift.open();
-		// Ȼ������Źر�
+		// 然后电梯门关闭
 		lift.close();
-		// ��Ȼ�󣬵��������������ϻ�������
+		// 再然后，电梯跑起来，向上或者向下
 		lift.run();
 
-		// ��󵽴�Ŀ�ĵأ�����ͦ����
+		// 最后到达目的地，电梯挺下来
 		lift.stop();
 	}
 }

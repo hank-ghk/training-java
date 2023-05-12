@@ -3,9 +3,9 @@ package DesignPattern24.cbf4life.observer.advance2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���й۲��ߣ�ͨ�ýӿ�
+* 所有观察者，通用接口
 */
 public interface Observer {
-	// һ���ֱ����ж������Լ�ҲҪ�ж�����
+	// 一发现别人有动静，自己也要行动起来
 	public void update(String context);
 }

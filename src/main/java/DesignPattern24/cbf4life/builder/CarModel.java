@@ -4,45 +4,45 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ������ģ�͵ĳ����࣬���еĳ���ģ�Ͷ��̳�������
+* 定义一个车辆模型的抽象类，所有的车辆模型都继承这里类
 */
 public abstract class CarModel {
-	// ��������Ǹ�����������ִ�е�˳��
+	// 这个参数是各个基本方法执行的顺序
 	private ArrayList<String> sequence = new ArrayList<String>();
 
 	/*
-	 * ģ����������ʼ����
+	 * 模型是启动开始跑了
 	 */
 	protected abstract void start();
 
-	// �ܷ������ǻ�Ҫ��ͣ�������ǲ����汾��
+	// 能发动，那还要能停下来，那才是真本事
 	protected abstract void stop();
 
-	// ���Ȼ���������ǵενУ��������ٽ�
+	// 喇叭会出声音，是滴滴叫，还是哔哔叫
 	protected abstract void alarm();
 
-	// ������¡¡���죬�������Ǽٵ�
+	// 引擎会轰隆隆的响，不响那是假的
 	protected abstract void engineBoom();
 
-	// ��ģ��Ӧ�û��ܰɣ���������Ƶģ����ǵ�����������֮Ҫ����
+	// 那模型应该会跑吧，别管是人推的，还是电力驱动，总之要会跑
 	final public void run() {
-		// ѭ��һ�飬˭��ǰ������ִ��˭
+		// 循环一遍，谁在前，就先执行谁
 		for (int i = 0; i < this.sequence.size(); i++) {
 			String actionName = this.sequence.get(i);
-			if (actionName.equalsIgnoreCase("start")) { // �����start�ؼ��֣�
-				this.start(); // ��������
-			} else if (actionName.equalsIgnoreCase("stop")) { // �����stop�ؼ���
-				this.stop(); // ֹͣ����
-			} else if (actionName.equalsIgnoreCase("alarm")) { // �����alarm�ؼ���
-				this.alarm(); // ���ȿ�ʼ����
-			} else if (actionName.equalsIgnoreCase("engine boom")) { // �����engine boom�ؼ���
-				this.engineBoom(); // ���濪ʼ����
+			if (actionName.equalsIgnoreCase("start")) { // 如果是start关键字，
+				this.start(); // 开启汽车
+			} else if (actionName.equalsIgnoreCase("stop")) { // 如果是stop关键字
+				this.stop(); // 停止汽车
+			} else if (actionName.equalsIgnoreCase("alarm")) { // 如果是alarm关键字
+				this.alarm(); // 喇叭开始叫了
+			} else if (actionName.equalsIgnoreCase("engine boom")) { // 如果是engine boom关键字
+				this.engineBoom(); // 引擎开始轰鸣
 
 			}
 		}
 	}
 
-	// �Ѵ��ݹ�����ֵ���ݵ�����
+	// 把传递过来的值传递到类内
 	final public void setSequence(ArrayList<String> sequence) {
 		this.sequence = sequence;
 	}

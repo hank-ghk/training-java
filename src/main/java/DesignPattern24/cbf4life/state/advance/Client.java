@@ -3,7 +3,7 @@ package DesignPattern24.cbf4life.state.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ģ����ݵĶ���
+* 模拟电梯的动作
 */
 public class Client {
 	public static void main(String[] args) {

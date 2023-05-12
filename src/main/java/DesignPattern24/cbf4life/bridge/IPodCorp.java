@@ -3,23 +3,23 @@ package DesignPattern24.cbf4life.bridge;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����ɽկ�ϴ�������ɶ�Ҿ�����ɶ
-* ��������iPod
+* 我是山寨老大，你流行啥我就生产啥
+* 现在流行iPod
 */
 public class IPodCorp extends Corp {
-	// �ҿ�ʼ����iPod��
+	// 我开始生产iPod了
 	protected void produce() {
-		System.out.println("������iPod...");
+		System.out.println("我生产iPod...");
 	}
 
-	// ɽկ��iPod�ܳ���������ѽ
+	// 山寨的iPod很畅销，便宜呀
 	protected void sell() {
-		System.out.println("iPod����...");
+		System.out.println("iPod畅销...");
 	}
 
-	// ��׬Ǯ
+	// 狂赚钱
 	public void makeMoney() {
 		super.makeMoney();
-		System.out.println("��׬Ǯѽ...");
+		System.out.println("我赚钱呀...");
 	}
 }

@@ -3,24 +3,24 @@ package DesignPattern24.cbf4life.adaptor;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �û���Ϣ����
+* 用户信息对象
 */
 public interface IUserInfo {
-	// ����û�����
+	// 获得用户姓名
 	public String getUserName();
 
-	// ��ü�ͥ��ַ
+	// 获得家庭地址
 	public String getHomeAddress();
 
-	// �ֻ����룬���̫��Ҫ���ֻ�����ѽ
+	// 手机号码，这个太重要，手机泛滥呀
 	public String getMobileNumber();
 
-	// �칫�绰��һ��ʽ����
+	// 办公电话，一般式座机
 	public String getOfficeTelNumber();
 
-	// ����˵�ְλ��ɶ
+	// 这个人的职位是啥
 	public String getJobPosition();
 
-	// ��ü�ͥ�绰������е�ȱ�£����ǲ�ϲ�����ͥ�绰���۹���
+	// 获得家庭电话，这个有点缺德，我是不喜欢打家庭电话讨论工作
 	public String getHomeTelNumber();
 }

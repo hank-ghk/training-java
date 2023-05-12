@@ -1,11 +1,11 @@
 package DesignPattern24.cbf4life.mediator2;
 
 public abstract class Mediator {
-	// ����ͬ����
+	// 定义同事类
 	protected ConcreteColleague1 c1;
 	protected ConcreteColleague2 c2;
 
-	// ͨ��getter/setter������ͬ����ע�����
+	// 通过getter/setter方法把同事类注入进来
 	public ConcreteColleague1 getC1() {
 		return c1;
 
@@ -23,7 +23,7 @@ public abstract class Mediator {
 		this.c2 = c2;
 	}
 
-	// �н���ģʽ��ҵ���߼�
+	// 中介者模式的业务逻辑
 	public abstract void doSomething1();
 
 	public abstract void doSomething2();

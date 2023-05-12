@@ -3,14 +3,14 @@ package DesignPattern24.cbf4life.bridge.implementor;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �Ҽ��Ź�˾�������·�
+* 我集团公司生产的衣服
 */
 public class Clothes extends Product {
 	public void beProducted() {
-		System.out.println("���������·���������ӵ�...");
+		System.out.println("生产出的衣服是这个样子的...");
 	}
 
 	public void beSelled() {
-		System.out.println("���������·�����ȥ��...");
+		System.out.println("生产出的衣服卖出去了...");
 	}
 }

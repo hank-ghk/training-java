@@ -5,13 +5,13 @@ public abstract class AbstractMediator {
 	protected Sale sale;
 	protected Stock stock;
 
-	// ���캯��
+	// 构造函数
 	public AbstractMediator() {
 		purchase = new Purchase(this);
 		sale = new Sale(this);
 		stock = new Stock(this);
 	}
 
-	// �н�������Ҫ�ķ����������¼�����������������֮��Ĺ�ϵ
+	// 中介者最重要的方法，叫做事件方法，处理多个对象之间的关系
 	public abstract void execute(String str, Object... objects);
 }

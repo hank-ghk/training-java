@@ -2,10 +2,10 @@ package DesignPattern24.cbf4life.strategy;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����˶Ϻ󣬵�ס׷��
+* 孙夫人断后，挡住追兵
 */
 public class BlockEnemy implements IStrategy {
 	public void operate() {
-		System.out.println("����˶Ϻ󣬵�ס׷��");
+		System.out.println("孙夫人断后，挡住追兵");
 	}
 }

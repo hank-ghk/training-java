@@ -4,21 +4,21 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ��������
+* 定义一个迭代器
 */
 public class ProjectIterator implements IProjectIterator {
-	// ���е���Ŀ����������ArrayList��
+	// 所有的项目都放在这里ArrayList中
 	private ArrayList<IProject> projectList = new ArrayList<IProject>();
 	private int currentItem = 0;
 
-	// ���캯������projectList
+	// 构造函数传入projectList
 	public ProjectIterator(ArrayList<IProject> projectList) {
 		this.projectList = projectList;
 	}
 
-	// �ж��Ƿ���Ԫ�أ�����ʵ��
+	// 判断是否还有元素，必须实现
 	public boolean hasNext() {
-		// ����һ������ֵ
+		// 定义一个返回值
 		boolean b = true;
 		if (this.currentItem >= projectList.size()
 				|| this.projectList.get(this.currentItem) == null) {
@@ -27,13 +27,13 @@ public class ProjectIterator implements IProjectIterator {
 		return b;
 	}
 
-	// ȡ����һ��ֵ
+	// 取得下一个值
 	public IProject next() {
 		return (IProject) this.projectList.get(this.currentItem++);
 	}
 
-	// ɾ��һ������
+	// 删除一个对象
 	public void remove() {
-		// ��ʱû��ʹ�õ�
+		// 暂时没有使用到
 	}
 }

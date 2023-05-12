@@ -2,26 +2,26 @@ package DesignPattern24.cbf4life.proxy;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����������ϴ����ˣ���̫���ˣ��Ǹ����˶������ϣ�
-* ���������ǻ��о���ѽ������Ϊһ��Ů�˵Ĵ���
+* 王婆这个人老聪明了，她太老了，是个男人都看不上，
+* 但是她有智慧有经验呀，她作为一类女人的代理！
 */
 public class WangPo implements KindWomen {
 	private KindWomen kindWomen;
 
-	public WangPo() { // Ĭ�ϵĻ������˽����Ĵ���
+	public WangPo() { // 默认的话，是潘金莲的代理
 		this.kindWomen = new PanJinLian();
 	}
 
-	// ��������KindWomen���κ�һ��Ů�˵Ĵ���ֻҪ������һ����
+	// 她可以是KindWomen的任何一个女人的代理，只要你是这一类型
 	public WangPo(KindWomen kindWomen) {
 		this.kindWomen = kindWomen;
 	}
 
 	public void happyWithMan() {
-		this.kindWomen.happyWithMan(); // �Լ����ˣ��ɲ��ˣ�����������Ĵ���
+		this.kindWomen.happyWithMan(); // 自己老了，干不了，可以让年轻的代替
 	}
 
 	public void makeEyesWithMan() {
-		this.kindWomen.makeEyesWithMan(); // ������ô�������ˣ�˭���������ۣ���
+		this.kindWomen.makeEyesWithMan(); // 王婆这么大年龄了，谁看她抛媚眼？！
 	}
 }

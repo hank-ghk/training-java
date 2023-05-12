@@ -3,39 +3,39 @@ package DesignPattern24.cbf4life.chainOfResponsibility.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �Ŵ�Ů�Ե��ܳ�
+* 古代女性的总称
 */
 public class Women implements IWomen {
 	/*
-	 * ͨ��һ��int���͵Ĳ�����������Ů�ĸ���״�� 1---δ���� 2---���� 3---����
+	 * 通过一个int类型的参数来描述妇女的个人状况 1---未出嫁 2---出嫁 3---夫死
 	 */
 	private int type = 0;
-	// ��Ů����ʾ
+	// 妇女的请示
 	private String request = "";
 
-	// ���캯�����ݹ�������
+	// 构造函数传递过来请求
 	public Women(int _type, String _request) {
 		this.type = _type;
-		// Ϊ����ʾ�ÿ��㣬�����������˵㴦��
+		// 为了显示好看点，我在这里做了点处理
 		switch (this.type) {
 		case 1:
-			this.request = "Ů���������ǣ�" + _request;
+			this.request = "女儿的请求是：" + _request;
 			break;
 		case 2:
-			this.request = "���ӵ������ǣ�" + _request;
+			this.request = "妻子的请求是：" + _request;
 			break;
 		case 3:
-			this.request = "ĸ�׵������ǣ�" + _request;
+			this.request = "母亲的请求是：" + _request;
 
 		}
 	}
 
-	// ����Լ���״��
+	// 获得自己的状况
 	public int getType() {
 		return this.type;
 	}
 
-	// ��ø�Ů������
+	// 获得妇女的请求
 	public String getRequest() {
 		return this.request;
 	}

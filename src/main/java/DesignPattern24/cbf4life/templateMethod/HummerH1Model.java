@@ -3,29 +3,29 @@ package DesignPattern24.cbf4life.templateMethod;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ������ÿ��ԽҰ�ߵ��������H1��ӽ�����ϵ��
+* 悍马车是每个越野者的最爱，其中H1最接近军用系列
 */
 public class HummerH1Model extends HummerModel {
-	private boolean alarmFlag = true; //�Ƿ�Ҫ������
+	private boolean alarmFlag = true; //是否要响喇叭
 	@Override
 	public void alarm() {
-		System.out.println("����H1����...");
+		System.out.println("悍马H1鸣笛...");
 	}
 
 	@Override
 	public void engineBoom() {
-		System.out.println("����H1����������������...");
+		System.out.println("悍马H1引擎声音是这样在...");
 	}
 
 	@Override
 	public void start() {
-		System.out.println("����H1����...");
+		System.out.println("悍马H1发动...");
 
 	}
 
 	@Override
 	public void stop() {
-		System.out.println("����H1ͣ��...");
+		System.out.println("悍马H1停车...");
 	}
 	
 	@Override
@@ -33,7 +33,7 @@ public class HummerH1Model extends HummerModel {
 		return this.alarmFlag;
 	}
 
-	// Ҫ��Ҫ�����ȣ����пͻ�����������
+	// 要不要响喇叭，是有客户的来决定的
 	public void setAlarm(boolean isAlarm) {
 		this.alarmFlag = isAlarm;
 	}

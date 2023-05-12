@@ -1,21 +1,21 @@
 package DesignPattern24.cbf4life.bridge.implementor;
 
-import com.cbf4life.bridge.abstraction.Corp;
+import DesignPattern24.cbf4life.bridge.abstraction.Corp;
 
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����ɽկ�ϴ�������ɶ�Ҿ�����ɶ
+* 我是山寨老大，你流行啥我就生产啥
 */
 public class ShanZhaiCorp extends Corp {
-	// ��ʲô��Ʒ����֪�����ȱ����õĲ�֪��
+	// 产什么产品，不知道，等被调用的才知道
 	public ShanZhaiCorp(Product product) {
 		super(product);
 	}
 
-	// ��׬Ǯ
+	// 狂赚钱
 	public void makeMoney() {
 		super.makeMoney();
-		System.out.println("��׬Ǯѽ...");
+		System.out.println("我赚钱呀...");
 	}
 }

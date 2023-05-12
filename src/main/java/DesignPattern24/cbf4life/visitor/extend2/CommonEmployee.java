@@ -3,10 +3,10 @@ package DesignPattern24.cbf4life.visitor.extend2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��ͨԱ����Ҳ������С��С��
+* 普通员工，也就是最小的小兵
 */
 public class CommonEmployee extends Employee {
-	// �������ݣ�����ǳ���Ҫ���Ժ��ְҵ�滮���ǿ������
+	// 工作内容，这个非常重要，以后的职业规划就是靠这个了
 	private String job;
 
 	public String getJob() {
@@ -17,7 +17,7 @@ public class CommonEmployee extends Employee {
 		this.job = job;
 	}
 
-	// ����������߹�������
+	// 我允许访问者过来访问
 
 	@Override
 	public void accept(IVisitor visitor) {

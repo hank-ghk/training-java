@@ -3,20 +3,20 @@ package DesignPattern24.cbf4life.command.command;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ������
+* 增加一项需求
 */
 public class AddRequirementCommand extends Command {
-	// ִ������һ�����������
+	// 执行增加一项需求的命令
 	public void execute() {
-		// �ҵ�������
+		// 找到需求组
 		super.rg.find();
-		// ����һ������
+		// 增加一份需求
 		super.rg.add();
-		// ҳ��ҲҪ����
+		// 页面也要增加
 		super.pg.add();
-		// ����ҲҪ����
+		// 功能也要增加
 		super.cg.add();
-		// �����ƻ�
+		// 给出计划
 		super.rg.plan();
 	}
 }

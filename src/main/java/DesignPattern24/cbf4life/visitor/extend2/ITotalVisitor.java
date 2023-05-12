@@ -3,9 +3,9 @@ package DesignPattern24.cbf4life.visitor.extend2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����ͳ�Ʊ���Ĳ���
+* 负责统计报表的产生
 */
 public interface ITotalVisitor extends IVisitor {
-	// ͳ������Ա�������ܺ�
+	// 统计所有员工工资总和
 	public void totalSalary();
 }

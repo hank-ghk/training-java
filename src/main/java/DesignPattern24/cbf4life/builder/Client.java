@@ -4,30 +4,30 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���տͻ���ʼʹ�����ģ��
+* 最终客户开始使用这个模型
 */
 public class Client {
 	public static void main(String[] args) {
 		/*
-		 * �ͻ�����ţ�湫˾����Ҫ����һ��ģ�ͣ�Ȼ��ţ�湫˾�͸������ϴ� ˵Ҫ����һ��ģ�ͣ�����һ��˳��Ȼ���Ҿ�������
+		 * 客户告诉牛叉公司，我要这样一个模型，然后牛叉公司就告诉我老大 说要这样一个模型，这样一个顺序，然后我就来制造
 		 */
-		ArrayList<String> sequence = new ArrayList<String>(); // ���run��˳��
-		sequence.add("engine boom"); // �ͻ�Ҫ��run��ʱ��ʱ���ȷ�������
-		sequence.add("start"); // ��������
-		sequence.add("stop"); // ����һ�ξ�ͣ����
-		// Ȼ�����ǰ����˳������۳���
+		ArrayList<String> sequence = new ArrayList<String>(); // 存放run的顺序
+		sequence.add("engine boom"); // 客户要求，run的时候时候先发动引擎
+		sequence.add("start"); // 启动起来
+		sequence.add("stop"); // 开了一段就停下来
+		// 然后我们把这个顺序给奔驰车：
 //		benz.setSequence(sequence);
 //		benz.run();
-		//Ҫһ�����۳���
+		//要一个奔驰车：
 		BenzBuilder benzBuilder = new BenzBuilder();
-		//��˳������builder�࣬���������һ��������
+		//把顺序给这个builder类，制造出这样一个车出来
 		benzBuilder.setSequence(sequence);
-		//�����һ�����۳�
+		//制造出一个奔驰车
 		BenzModel benz = (BenzModel)benzBuilder.getCarModel();
-		//���۳���һ�¿���
+		//奔驰车跑一下看看
 		benz.run();
 		
-		//����ͬ����˳������Ҫһ������
+		//按照同样的顺序，我再要一个宝马
 		BMWBuilder bmwBuilder = new BMWBuilder();
 		bmwBuilder.setSequence(sequence);
 		BMWModel bmw = (BMWModel)bmwBuilder.getCarModel();

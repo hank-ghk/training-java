@@ -3,18 +3,18 @@ package DesignPattern24.cbf4life.observer.advance2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��˹��Ҳ�ǹ۲��ߣ���׫������
+* 王斯，也是观察者，杜撰的人名
 */
 public class WangSi implements Observer {
-	// ��˹�������������л���Լ����ܲ���
+	// 王斯，看到韩非子有活动，自己就受不了
 	public void update(String str) {
-		System.out.println("��˹���۲쵽�����ӻ���Լ�Ҳ��ʼ���...");
+		System.out.println("王斯：观察到韩非子活动，自己也开始活动了...");
 		this.cry(str);
-		System.out.println("��˹������Ŀ�����...\n");
+		System.out.println("王斯：真真的哭死了...\n");
 	}
 
-	// һ����˹�л���Ϳޣ�ʹ��
+	// 一看李斯有活动，就哭，痛哭
 	private void cry(String context) {
-		System.out.println("��˹����Ϊ" + context + "�����������ұ���ѽ��");
+		System.out.println("王斯：因为" + context + "，――所以我悲伤呀！");
 	}
 }

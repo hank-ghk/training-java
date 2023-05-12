@@ -1,21 +1,21 @@
 package DesignPattern24.cbf4life.mediator2;
 
 public class ConcreteColleague2 extends Colleague {
-	// ͨ�����캯�������н���
+	// 通过构造函数传递中介者
 	public ConcreteColleague2(Mediator _mediator) {
 		super(_mediator);
 
 	}
 
-	// ���з��� self-method
+	// 自有方法 self-method
 	public void selfMethod2() {
-		// �����Լ���ҵ���߼�
+		// 处理自己的业务逻辑
 	}
 
-	// ��������dep-method
+	// 依赖方法dep-method
 	public void depMethod2() {
-		// �����Լ���ҵ���߼�
-		// �Լ����ܴ����ҵ���߼���ί�и��н��ߴ���
+		// 处理自己的业务逻辑
+		// 自己不能处理的业务逻辑，委托给中介者处理
 		super.mediator.doSomething2();
 	}
 }

@@ -3,31 +3,31 @@ package DesignPattern24.cbf4life.command;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* �������ְ������Ƴ�һ��Ư�����򵥡���ݵĽ���
+* 美工组的职责是设计出一套漂亮、简单、便捷的界面
 */
 public class PageGroup extends Group {
-	// �������������Ӧ�ñ��ҵ��ɣ�Ҫ�����˭̸��
+	// 首先这个美工组应该被找到吧，要不你跟谁谈？
 	public void find() {
-		System.out.println("�ҵ�������...");
+		System.out.println("找到美工组...");
 	}
 
-	// ������Ҫ������һ��ҳ��
+	// 美工被要求增加一个页面
 	public void add() {
-		System.out.println("�ͻ�Ҫ������һ��ҳ��...");
+		System.out.println("客户要求增加一个页面...");
 	}
 
-	// �ͻ�Ҫ������н������޸�
+	// 客户要求对现有界面做修改
 	public void change() {
-		System.out.println("�ͻ�Ҫ���޸�һ��ҳ��...");
+		System.out.println("客户要求修改一个页面...");
 	}
 
-	// �׷����ϴ�Ҫ��ɾ��һЩҳ��
+	// 甲方是老大，要求删除一些页面
 	public void delete() {
-		System.out.println("�ͻ�Ҫ��ɾ��һ��ҳ��...");
+		System.out.println("客户要求删除一个页面...");
 	}
 
-	// ���е���ɾ����Ҫ�����ƻ�ѽ
+	// 所有的增删改那要给出计划呀
 	public void plan() {
-		System.out.println("�ͻ�Ҫ��ҳ�����ƻ�...");
+		System.out.println("客户要求页面变更计划...");
 	}
 }

@@ -7,7 +7,7 @@ public class AddExpression extends SymbolExpression {
 		super(_left, _right);
 	}
 
-	// �������������ʽ����Ľ��������
+	// 把左右两个表达式运算的结果加起来
 	public int interpreter(HashMap<String, Integer> var) {
 		return super.left.interpreter(var) + super.right.interpreter(var);
 	}

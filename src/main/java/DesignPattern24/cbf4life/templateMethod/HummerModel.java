@@ -3,37 +3,37 @@ package DesignPattern24.cbf4life.templateMethod;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* Hummer Model�Ǻ�����ģ�͵���˼�����Ǻ�����Ů��ģ
+* Hummer Model是悍马车辆模型的意思，不是悍马美女车模
 */
 public abstract class HummerModel {
 	/*
-	 * ���ȣ����ģ��Ҫ�ܹ��������������������ҡ���������ǵ������������� ��Ҫ�ܹ����������������ʵ��Ҫ��ʵ��������
+	 * 首先，这个模型要能够被发动起来，别管是手摇发动，还是电力发动，反正 是要能够发动起来，那这个实现要在实现类里了
 	 */
 	protected abstract void start();
 
-	// �ܷ������ǻ�Ҫ��ͣ�������ǲ����汾��
+	// 能发动，那还要能停下来，那才是真本事
 	protected abstract void stop();
 
-	// ���Ȼ���������ǵενУ��������ٽ�
+	// 喇叭会出声音，是滴滴叫，还是哔哔叫
 	protected abstract void alarm();
 
-	// ������¡¡���죬�������Ǽٵ�
+	// 引擎会轰隆隆的响，不响那是假的
 	protected abstract void engineBoom();
 
-	// ��ģ��Ӧ�û��ܰɣ���������˵ģ����ǵ�����������֮Ҫ����
+	// 那模型应该会跑吧，别管是人退的，还是电力驱动，总之要会跑
 	final public void run() {
-		// �ȷ�������
+		// 先发动汽车
 		this.start();
-		// ���濪ʼ����
+		// 引擎开始轰鸣
 		this.engineBoom();
-		//��������������죬����������Ͳ���
+		//喇嘛想让它响就响，不想让它响就不响
 		if(this.isAlarm()){
 		this.alarm();
 		}
-		// ����Ŀ�ĵؾ�ͣ��
+		// 到达目的地就停车
 		this.stop();
 	}
-	//���ӷ�����Ĭ�������ǻ����
+	//钩子方法，默认喇叭是会响的
 	protected boolean isAlarm() {
 		return true;
 	}

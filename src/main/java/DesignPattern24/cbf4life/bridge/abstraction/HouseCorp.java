@@ -1,22 +1,22 @@
 package DesignPattern24.cbf4life.bridge.abstraction;
 
-import com.cbf4life.bridge.implementor.House;
+import DesignPattern24.cbf4life.bridge.implementor.House;
 
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���ز���˾�����շ�����˵Ӧ�ý�realty corp������ǱȽ�׼ȷ�ķ���
-* ���������㷿�ز���˾�����Ӣ�ģ����һ��Ӧʲô�����ﻹ��house corp!
+* 房地产公司，按照翻译来说应该叫realty corp，这个是比较准确的翻译
+* 但是我问你房地产公司翻译成英文，你第一反应什么？对嘛还是house corp!
 */
 public class HouseCorp extends Corp {
-	// ���崫��һ��House��Ʒ����
+	// 定义传递一个House产品进来
 	public HouseCorp(House house) {
 		super(house);
 	}
 
-	// ���ز���˾��High�ˣ�׬Ǯ����������
+	// 房地产公司很High了，赚钱，计算利润
 	public void makeMoney() {
 		super.makeMoney();
-		System.out.println("���ز���˾׬��Ǯ��...");
+		System.out.println("房地产公司赚大钱了...");
 	}
 }

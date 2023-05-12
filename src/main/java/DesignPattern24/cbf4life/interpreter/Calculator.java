@@ -4,23 +4,23 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class Calculator {
-	// ����ı��ʽ
+	// 定义的表达式
 	private Expression expression;
 
-	// ���캯������,������
+	// 构造函数传参,并解析
 	public Calculator(String expStr) {
-		// ����һ����ջ������������Ⱥ�˳��
+		// 定义一个堆栈，安排运算的先后顺序
 
 		Stack<Expression> stack = new Stack<Expression>();
-		// ���ʽ���Ϊ�ַ�����
+		// 表达式拆分为字符数组
 		char[] charArray = expStr.toCharArray();
-		// ����
+		// 运算
 		Expression left = null;
 		Expression right = null;
 		for (int i = 0; i < charArray.length; i++) {
 			switch (charArray[i]) {
-			case '+': // �ӷ�
-				// �ӷ�����ŵ���ջ��
+			case '+': // 加法
+				// 加法结果放到堆栈中
 				left = stack.pop();
 				right = new VarExpression(String.valueOf(charArray[++i]));
 				stack.push(new AddExpression(left, right));
@@ -30,15 +30,15 @@ public class Calculator {
 				right = new VarExpression(String.valueOf(charArray[++i]));
 				stack.push(new SubExpression(left, right));
 				break;
-			default: // ��ʽ�еı���
+			default: // 公式中的变量
 				stack.push(new VarExpression(String.valueOf(charArray[i])));
 			}
 		}
-		// ���������׳���
+		// 把运算结果抛出来
 		this.expression = stack.pop();
 	}
 
-	// ��ʼ����
+	// 开始运算
 	public int run(HashMap<String, Integer> var) {
 		return this.expression.interpreter(var);
 	}

@@ -3,34 +3,34 @@ package DesignPattern24.cbf4life.visitor.extend2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* չʾ�����÷����ߵĹ������ǿ���ʲô����չʾʲô����
+* 展示报表，该访问者的工作就是看到什么数据展示什么数据
 */
 public class ShowVisitor implements IShowVisitor {
 	private String info = "";
 
-	// ��ӡ������
+	// 打印出报表
 	public void report() {
 		System.out.println(this.info);
 	}
 
-	// ������ͨԱ������װ��Ϣ
+	// 访问普通员工，组装信息
 	public void visit(CommonEmployee commonEmployee) {
-		this.info = this.info + this.getBasicInfo(commonEmployee) + "������"
+		this.info = this.info + this.getBasicInfo(commonEmployee) + "工作："
 				+ commonEmployee.getJob() + "\t\n";
 	}
 
-	// ���ʾ���Ȼ����װ��Ϣ
+	// 访问经理，然后组装信息
 	public void visit(Manager manager) {
-		this.info = this.info + this.getBasicInfo(manager) + "ҵ����"
+		this.info = this.info + this.getBasicInfo(manager) + "业绩："
 				+ manager.getPerformance() + "\t\n";
 	}
 
-	// ��װ��������Ϣ
+	// 组装出基本信息
 	private String getBasicInfo(Employee employee) {
-		String info = "������" + employee.getName() + "\t";
-		info = info + "�Ա�"
-				+ (employee.getSex() == Employee.FEMALE ? "Ů" : "��") + "\t";
-		info = info + "нˮ��" + employee.getSalary() + "\t";
+		String info = "姓名：" + employee.getName() + "\t";
+		info = info + "性别："
+				+ (employee.getSex() == Employee.FEMALE ? "女" : "男") + "\t";
+		info = info + "薪水：" + employee.getSalary() + "\t";
 		return info;
 	}
 }

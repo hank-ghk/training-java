@@ -3,25 +3,25 @@ package DesignPattern24.cbf4life.observer.common;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���Client�������ǣ������ǵ��ӽǿ��������ʷ
+* 这个Client就是我们，用我们的视角看待这段历史
 */
 public class Client {
 	public static void main(String[] args) throws InterruptedException {
-		// ����������Ӻ���˹
+		// 定义出韩非子和李斯
 		LiSi liSi = new LiSi();
 		HanFeiZi hanFeiZi = new HanFeiZi();
-		// �۲����
+		// 观察早餐
 		Watch watchBreakfast = new Watch(hanFeiZi, liSi, "breakfast");
-		// ��ʼ�����̣߳����
+		// 开始启动线程，监控
 		watchBreakfast.start();
-		// �۲��������
+		// 观察娱乐情况
 		Watch watchFun = new Watch(hanFeiZi, liSi, "fun");
 		watchFun.start();
 
-		// Ȼ���������ǿ����������ڸ�ʲô
-		Thread.sleep(1000); // ���̵߳ȴ�1����������ִ��
+		// 然后这里我们看看韩非子在干什么
+		Thread.sleep(1000); // 主线程等待1秒后后再往下执行
 		hanFeiZi.haveBreakfast();
-		// ������������
+		// 韩非子娱乐了
 		Thread.sleep(1000);
 		hanFeiZi.haveFun();
 	}

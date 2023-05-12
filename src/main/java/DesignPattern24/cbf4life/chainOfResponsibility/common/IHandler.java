@@ -3,10 +3,10 @@ package DesignPattern24.cbf4life.chainOfResponsibility.common;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��ϵ��ᣬ�Ǿ�������������Ȩ����handler����Ȩ
+* 父系社会，那就是男性有至高权利，handler控制权
 */
 
 public interface IHandler {
-	// һ��Ů�ԣ�Ů�������ӻ�����ĸ�ף�Ҫ���֣���Ҫ�����������
+	// 一个女性（女儿，妻子或者是母亲）要求逛街，你要处理这个请求
 	public void HandleMessage(IWomen women);
 }

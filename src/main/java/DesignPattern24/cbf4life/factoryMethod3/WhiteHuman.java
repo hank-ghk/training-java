@@ -3,18 +3,18 @@ package DesignPattern24.cbf4life.factoryMethod3;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��ɫ����
+* 白色人种
 */
 public class WhiteHuman implements Human {
 	public void cry() {
-		System.out.println("��ɫ���ֻ��");
+		System.out.println("白色人种会哭");
 	}
 
 	public void laugh() {
-		System.out.println("��ɫ���ֻ��Ц�����Ե�Ц��");
+		System.out.println("白色人种会大笑，侵略的笑声");
 	}
 
 	public void talk() {
-		System.out.println("��ɫ���ֻ�˵����һ�㶼�ǵ��ǵ��ֽڣ�");
+		System.out.println("白色人种会说话，一般都是但是单字节！");
 	}
 }

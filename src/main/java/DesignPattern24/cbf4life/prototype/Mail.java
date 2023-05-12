@@ -1,24 +1,24 @@
 package DesignPattern24.cbf4life.prototype;
 
 public class Mail {
-	// �ռ���
+	// 收件人
 	private String receiver;
-	// �ʼ�����
+	// 邮件名称
 	private String subject;
-	// ��ν
+	// 称谓
 	private String appellation;
-	// �ʼ�����
+	// 邮件内容
 	private String contxt;
-	// �ʼ���β����һ�㶼�Ǽ��ϡ�XXX��Ȩ���С�����Ϣ
+	// 邮件的尾部，一般都是加上“XXX版权所有”等信息
 	private String tail;
 
-	// ���캯��
+	// 构造函数
 	public Mail(AdvTemplate advTemplate) {
 		this.contxt = advTemplate.getAdvContext();
 		this.subject = advTemplate.getAdvSubject();
 	}
 
-	// ����Ϊgetter/setter����
+	// 以下为getter/setter方法
 	public String getReceiver() {
 		return receiver;
 	}

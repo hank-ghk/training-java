@@ -3,16 +3,16 @@ package DesignPattern24.cbf4life.observer.advance2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���б��۲����ߣ�ͨ�ýӿ�
+* 所有被观察者者，通用接口
 */
 public interface Observable {
-	// ����һ���۲���
+	// 增加一个观察者
 
 	public void addObserver(Observer observer);
 
-	// ɾ��һ���۲��ߣ������Ҳ������㿴��
+	// 删除一个观察者，――我不想让你看了
 	public void deleteObserver(Observer observer);
 
-	// ��ȻҪ�۲죬�ҷ����ı�����ҲӦ��������������֪ͨ�۲���
+	// 既然要观察，我发生改变了他也应该用所动作――通知观察者
 	public void notifyObservers(String context);
 }

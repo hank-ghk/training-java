@@ -7,7 +7,7 @@ public class SubExpression extends SymbolExpression {
 		super(_left, _right);
 	}
 
-	// �����������ʽ���
+	// 左右两个表达式相减
 	public int interpreter(HashMap<String, Integer> var) {
 		return super.left.interpreter(var) - super.right.interpreter(var);
 	}

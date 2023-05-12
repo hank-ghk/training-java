@@ -4,16 +4,16 @@ import java.util.Map;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��OuterUser��װ��UserInfo
+* 把OuterUser包装成UserInfo
 */
 
 @SuppressWarnings("all")
 public class OuterUserInfo extends OuterUser implements IUserInfo {
-	private Map baseInfo = super.getUserBaseInfo(); // Ա���Ļ�����Ϣ
-	private Map homeInfo = super.getUserHomeInfo(); // Ա���ļ�ͥ��Ϣ
-	private Map officeInfo = super.getUserOfficeInfo(); // ������Ϣ
+	private Map baseInfo = super.getUserBaseInfo(); // 员工的基本信息
+	private Map homeInfo = super.getUserHomeInfo(); // 员工的家庭信息
+	private Map officeInfo = super.getUserOfficeInfo(); // 工作信息
 	/*
-	 * ��ͥ��ַ
+	 * 家庭地址
 	 */
 
 	public String getHomeAddress() {
@@ -23,7 +23,7 @@ public class OuterUserInfo extends OuterUser implements IUserInfo {
 	}
 
 	/*
-	 * ��ͥ�绰����
+	 * 家庭电话号码
 	 */
 	public String getHomeTelNumber() {
 		String homeTelNumber = (String) this.homeInfo.get("homeTelNumber");
@@ -32,7 +32,7 @@ public class OuterUserInfo extends OuterUser implements IUserInfo {
 	}
 
 	/*
-	 * ְλ��Ϣ
+	 * 职位信息
 	 */
 	public String getJobPosition() {
 		String jobPosition = (String) this.officeInfo.get("jobPosition");
@@ -41,7 +41,7 @@ public class OuterUserInfo extends OuterUser implements IUserInfo {
 	}
 
 	/*
-	 * �ֻ�����
+	 * 手机号码
 	 */
 	public String getMobileNumber() {
 		String mobileNumber = (String) this.baseInfo.get("mobileNumber");
@@ -50,7 +50,7 @@ public class OuterUserInfo extends OuterUser implements IUserInfo {
 	}
 
 	/*
-	 * �칫�绰
+	 * 办公电话
 	 */
 	public String getOfficeTelNumber() {
 		String officeTelNumber = (String) this.officeInfo
@@ -60,7 +60,7 @@ public class OuterUserInfo extends OuterUser implements IUserInfo {
 	}
 
 	/*
-	 * Ա��������
+	 * 员工的名称
 	 */
 	public String getUserName() {
 		String userName = (String) this.baseInfo.get("userName");

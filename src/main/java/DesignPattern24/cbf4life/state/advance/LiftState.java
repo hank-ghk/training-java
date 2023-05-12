@@ -3,25 +3,25 @@ package DesignPattern24.cbf4life.state.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ�����ݵĽӿ�
+* 定义一个电梯的接口
 */
 public abstract class LiftState {
-	// ����һ��������ɫ��Ҳ���Ƿ�װ״̬�ı任����Ĺ��ܱ仯
+	// 定义一个环境角色，也就是封装状态的变换引起的功能变化
 	protected Context context;
 
 	public void setContext(Context _context) {
 		this.context = _context;
 	}
 
-	// ���ȵ����ſ�������
+	// 首先电梯门开启动作
 	public abstract void open();
 
-	// �������п������ǵ�ȻҲ���йر���
+	// 电梯门有开启，那当然也就有关闭了
 	public abstract void close();
 
-	// ����Ҫ�������£�������
+	// 电梯要能上能下，跑起来
 	public abstract void run();
 
-	// ���ݻ�Ҫ��ͣ������ͣ�������Ǿͳ�����
+	// 电梯还要能停下来，停不下来那就扯淡了
 	public abstract void stop();
 }

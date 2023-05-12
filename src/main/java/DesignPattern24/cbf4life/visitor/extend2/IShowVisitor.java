@@ -3,9 +3,9 @@ package DesignPattern24.cbf4life.visitor.extend2;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����չʾ����Ĳ���
+* 负责展示报表的产生
 */
 public interface IShowVisitor extends IVisitor {
-	// չʾ����
+	// 展示报表
 	public void report();
 }

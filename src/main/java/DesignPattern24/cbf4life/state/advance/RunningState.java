@@ -3,31 +3,31 @@ package DesignPattern24.cbf4life.state.advance;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����������״̬��������Щ����
+* 电梯在运行状态下能做哪些动作
 */
 public class RunningState extends LiftState {
-	// �����Źرգ����ǿ϶���
+	// 电梯门关闭？这是肯定了
 	@Override
 	public void close() {
 		// do nothing
 	}
 
-	// ���е�ʱ�򿪵����ţ�����ˣ����ݲ�����㿪��
+	// 运行的时候开电梯门？你疯了！电梯不会给你开的
 	@Override
 	public void open() {
 		// do nothing
 	}
 
-	// ����������״̬��Ҫʵ�ֵķ���
+	// 这是在运行状态下要实现的方法
 	@Override
 	public void run() {
-		System.out.println("����������...");
+		System.out.println("电梯上下跑...");
 	}
 
-	// ����¾����Ǻ���ģ������в�ֹͣ����˭����������ݣ�������ֻ���ϵ���
+	// 这个事绝对是合理的，光运行不停止还有谁敢做这个电梯？！估计只有上帝了
 	@Override
 	public void stop() {
-		super.context.setLiftState(Context.stoppingState); // ��������Ϊֹͣ״̬��
+		super.context.setLiftState(Context.stoppingState); // 环境设置为停止状态；
 		super.context.getLiftState().stop();
 	}
 }

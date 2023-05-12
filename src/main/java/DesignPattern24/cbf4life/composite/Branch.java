@@ -4,46 +4,46 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���е���֦�ڵ�
+* 所有的树枝节点
 */
 @SuppressWarnings("all")
 public class Branch implements IBranch {
-	// �洢�ӽڵ����Ϣ
+	// 存储子节点的信息
 	private ArrayList subordinateList = new ArrayList();
-	// ��֦�ڵ������
+	// 树枝节点的名称
 	private String name = "";
-	// ��֦�ڵ��ְλ
+	// 树枝节点的职位
 	private String position = "";
-	// ��֦�ڵ��нˮ
+	// 树枝节点的薪水
 	private int salary = 0;
 
-	// ͨ�����캯��������֦�ڵ�Ĳ���
+	// 通过构造函数传递树枝节点的参数
 	public Branch(String name, String position, int salary) {
 		this.name = name;
 		this.position = position;
 		this.salary = salary;
 	}
 
-	// ����һ������֦�ڵ�
+	// 增加一个子树枝节点
 	public void add(IBranch branch) {
 		this.subordinateList.add(branch);
 	}
 
-	// ����һ��Ҷ�ӽڵ�
+	// 增加一个叶子节点
 	public void add(ILeaf leaf) {
 		this.subordinateList.add(leaf);
 	}
 
-	// ����Լ���֦�ڵ����Ϣ
+	// 获得自己树枝节点的信息
 	public String getInfo() {
 		String info = "";
-		info = "���ƣ�" + this.name;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ��" + this.salary;
+		info = "名称：" + this.name;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水：" + this.salary;
 		return info;
 	}
 
-	// ����¼�����Ϣ
+	// 获得下级的信息
 	public ArrayList getSubordinateInfo() {
 		return this.subordinateList;
 	}

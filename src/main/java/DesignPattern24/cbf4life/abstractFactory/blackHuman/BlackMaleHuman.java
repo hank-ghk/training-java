@@ -1,12 +1,12 @@
-package DesignPattern24.cbf4life.abstactFactory.blackHuman;
+package DesignPattern24.cbf4life.abstractFactory.blackHuman;
 
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ���Ժ�����
+* 男性黑种人
 */
 public class BlackMaleHuman extends AbstractBlackHuman {
 	public void sex() {
-		System.out.println("�ú����˵��Ա�Ϊ��...");
+		System.out.println("该黑种人的性别为男...");
 	}
 }

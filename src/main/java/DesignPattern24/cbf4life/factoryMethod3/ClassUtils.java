@@ -14,18 +14,18 @@ import java.util.List;
 */
 @SuppressWarnings("all")
 public class ClassUtils {
-	// ��һ���ӿڣ���������ӿڵ�����ʵ����
+	// 给一个接口，返回这个接口的所有实现类
 	public static List<Class> getAllClassByInterface(Class c) {
-		List<Class> returnClassList = new ArrayList<Class>(); // ���ؽ��
-		// �������һ���ӿڣ���������
+		List<Class> returnClassList = new ArrayList<Class>(); // 返回结果
+		// 如果不是一个接口，则不做处理
 		if (c.isInterface()) {
-			String packageName = c.getPackage().getName(); // ��õ�ǰ�İ���
+			String packageName = c.getPackage().getName(); // 获得当前的包名
 			try {
-				List<Class> allClass = getClasses(packageName); // ��õ�ǰ�����Լ��Ӱ��µ�������
-				// �ж��Ƿ���ͬһ���ӿ�
+				List<Class> allClass = getClasses(packageName); // 获得当前包下以及子包下的所有类
+				// 判断是否是同一个接口
 				for (int i = 0; i < allClass.size(); i++) {
-					if (c.isAssignableFrom(allClass.get(i))) { // �ж��ǲ���һ���ӿ�
-						if (!c.equals(allClass.get(i))) { // �����ӽ�ȥ
+					if (c.isAssignableFrom(allClass.get(i))) { // 判断是不是一个接口
+						if (!c.equals(allClass.get(i))) { // 本身不加进去
 							returnClassList.add(allClass.get(i));
 						}
 					}
@@ -40,7 +40,7 @@ public class ClassUtils {
 		return returnClassList;
 	}
 
-	// ��һ�����в��ҳ����е��࣬��jar���в��ܲ���
+	// 从一个包中查找出所有的类，在jar包中不能查找
 	private static List<Class> getClasses(String packageName)
 			throws ClassNotFoundException, IOException {
 		ClassLoader classLoader = Thread.currentThread()

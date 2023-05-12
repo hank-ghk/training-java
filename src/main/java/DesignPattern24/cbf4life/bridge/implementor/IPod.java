@@ -3,14 +3,14 @@ package DesignPattern24.cbf4life.bridge.implementor;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����iPod��
+* 生产iPod了
 */
 public class IPod extends Product {
 	public void beProducted() {
-		System.out.println("��������iPod��������ӵ�...");
+		System.out.println("生产出的iPod是这个样子的...");
 	}
 
 	public void beSelled() {
-		System.out.println("��������iPod����ȥ��...");
+		System.out.println("生产出的iPod卖出去了...");
 	}
 }

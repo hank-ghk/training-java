@@ -7,21 +7,21 @@ public class Sale extends AbstractColleague {
 		super(_mediator);
 	}
 
-	// ����IBM�ͺŵĵ���
+	// 销售IBM型号的电脑
 	public void sellIBMComputer(int number) {
 		super.mediator.execute("sale.sell", number);
-		System.out.println("����IBM����" + number + "̨");
+		System.out.println("销售IBM电脑" + number + "台");
 	}
 
-	// �����������,0����100֮��仯��0���������û������100����ǳ���������1һ����һ��
+	// 反馈销售情况,0――100之间变化，0代表根本就没人卖，100代表非常畅销，出1一个卖一个
 	public int getSaleStatus() {
 		Random rand = new Random(System.currentTimeMillis());
 		int saleStatus = rand.nextInt(100);
-		System.out.println("IBM���Ե��������Ϊ��" + saleStatus);
+		System.out.println("IBM电脑的销售情况为：" + saleStatus);
 		return saleStatus;
 	}
 
-	// �ۼ۴���
+	// 折价处理
 	public void offSale() {
 		super.mediator.execute("sale.offsell");
 	}

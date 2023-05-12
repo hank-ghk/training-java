@@ -4,16 +4,16 @@ import java.util.ArrayList;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ��Щ�±���С�������Ǿ���ȷ�������
+* 这些下边有小兵或者是经理等风云人物
 */
 public interface IBranch {
 
-	// �ܹ�����С��(��Ҷ�ڵ㣩�����Ǿ�����֦�ڵ㣩
+	// 能够增加小兵(树叶节点）或者是经理（树枝节点）
 	public void addSubordinate(ICorp corp);
 
-	// �һ�Ҫ�ܹ������������Ϣ
+	// 我还要能够获得下属的信息
 	public ArrayList<ICorp> getSubordinate();
 	/*
-	 * ������Ӧ����һ������delSubordinate(ICorp corp)��ɾ������ �����������û���õ��Ͳ�д������
+	 * 本来还应该有一个方法delSubordinate(ICorp corp)，删除下属 这个方法我们没有用到就不写进来了
 	 */
 }

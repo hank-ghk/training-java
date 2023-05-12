@@ -3,19 +3,19 @@ package DesignPattern24.cbf4life.composite.perfect;
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.
-* ����һ����˾����Ա�ĳ�����
+* 定义一个公司的人员的抽象类
 */
 @SuppressWarnings("all")
 public abstract class Corp {
-	// ��˾ÿ���˶�������
+	// 公司每个人都有名称
 	private String name = "";
-	// ��˾ÿ���˶�ְλ
+	// 公司每个人都职位
 	private String position = "";
-	// ��˾ÿ���˶���нˮ
+	// 公司每个人都有薪水
 	private int salary = 0;
 
 	/*
-	 * ͨ���ӿڵķ�ʽ���ݣ����Ǹı�һ��ϰ�ߣ����ݽ����Ĳ��������»��߿�ʼ �����һЩ��Դ��Ŀ�зǳ�������һ�㹹�캯��������ô�����
+	 * 通过接口的方式传递，我们改变一下习惯，传递进来的参数名以下划线开始 这个在一些开源项目中非常常见，一般构造函数都是这么定义的
 	 */
 	public Corp(String _name, String _position, int _salary) {
 		this.name = _name;
@@ -23,12 +23,12 @@ public abstract class Corp {
 		this.salary = _salary;
 	}
 
-	// ���Ա����Ϣ
+	// 获得员工信息
 	public String getInfo() {
 		String info = "";
-		info = "������" + this.name;
-		info = info + "\tְλ��" + this.position;
-		info = info + "\tнˮ��" + this.salary;
+		info = "姓名：" + this.name;
+		info = info + "\t职位：" + this.position;
+		info = info + "\t薪水：" + this.salary;
 		return info;
 	}
 }

@@ -1,19 +1,19 @@
 package DesignPattern24.cbf4life.command.command;
 
-import com.cbf4life.command.CodeGroup;
-import com.cbf4life.command.PageGroup;
-import com.cbf4life.command.RequirementGroup;
+import DesignPattern24.cbf4life.command.CodeGroup;
+import DesignPattern24.cbf4life.command.PageGroup;
+import DesignPattern24.cbf4life.command.RequirementGroup;
 
 /**
  * @author cbf4Life cbf4life@126.com I'm glad to share my knowledge with you
- *         all. ����ĳ����࣬���ǰѿͻ�������������һ��һ���Ķ���
+ *         all. 命令的抽象类，我们把客户发出的命令定义成一个一个的对象
  */
 public abstract class Command {
-	// �������鶼����ã��������ֱ��ʹ��
-	protected RequirementGroup rg = new RequirementGroup(); // ������
-	protected PageGroup pg = new PageGroup(); // ������
-	protected CodeGroup cg = new CodeGroup(); // ������;
+	// 把三个组都定义好，子类可以直接使用
+	protected RequirementGroup rg = new RequirementGroup(); // 需求组
+	protected PageGroup pg = new PageGroup(); // 美工组
+	protected CodeGroup cg = new CodeGroup(); // 代码组;
 
-	// ֻҪһ����������Ҫ����ʲô����
+	// 只要一个方法，你要我做什么事情
 	public abstract void execute();
 }

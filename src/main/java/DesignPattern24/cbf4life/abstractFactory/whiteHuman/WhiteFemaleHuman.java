@@ -1,12 +1,12 @@
-package DesignPattern24.cbf4life.abstactFactory.whiteHuman;
+package DesignPattern24.cbf4life.abstractFactory.whiteHuman;
 
 /**
 * @author cbf4Life cbf4life@126.com
 * I'm glad to share my knowledge with you all.\
-* Ů�԰�����
+* 女性白种人
 */
 public class WhiteFemaleHuman extends AbstractWhiteHuman {
 	public void sex() {
-		System.out.println("�ð����˵��Ա�ΪŮ....");
+		System.out.println("该白种人的性别为女....");
 	}
 }
